@@ -44,7 +44,7 @@ figure.foto-legenda:hover figcaption{  /* O 'hover' determina uma ação ou conj
 
 /* Formatação do Menu */
 nav#menu{
-	display: block;
+	display: block; /* Transforma o campo niv em um bloco */
 }
 
 nav#menu h1{
