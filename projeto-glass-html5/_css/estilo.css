@@ -3,12 +3,20 @@
 
 /*Aqui embaixo estão os estilos de css (style) body e p, substituindo o que existia no código html. */
 body{
-	background-color: white;
+	background-color: #dddddd;
 	color: rgba(0, 0, 0, 1);
 }
 p{
 	text-align: justify;
 	text-indent: 50px;
+}
+
+div#interface{
+	background-color: #ffffff;
+	width: 1450px;
+	margin: -21px auto 0px auto; /* Os parâmetros da margem são respectivamente: pixels de cima, da direita, de baixo e da esquerda. O tamanho da margem direita e esquerda foram colocadas como 'auto' para que fosse ajustada automaticamente pelo navegador, sendo possível CENTRALIZAR a página adequadamente de navegador pra navegador */
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+	padding: 10px 10px 10px 10px; /* Como a pixelagem para cima, direita, baixo e esquerda, respectivamente, é a mesma (10px), eu poderia colocar apenas 'padding: 10px;', que seria atribuído 10px para as 4 direções, mas optei por não fazê-lo.*/
 }
 
 /* Formatação de Imagens com Legendas */
@@ -34,12 +42,16 @@ figure.foto-legenda figcaption{
 	height: 100%;
 	padding: 7%; /* Dá um espaçamento de 10% da legenda em relação à borda */
 	box-sizing: border-box; /* A caixa de legenda irá ocupar corretamente a borda */
+	transition: opacity 1s; /* Transition define o tempo necessário (em segundos) para realizar uma mudança de um parâmetro. Geralmente àquele que sofrerá modificações ao passarmos o mouse em cima. A ordem dos parâmetros do transition é: o parâmetro a ser modificado, tempo de transição */
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-ms-transition: opacity 1s;
+	-o-transition: opacity 1s;
 
 }
 
-figure.foto-legenda:hover figcaption{  /* O 'hover' determina uma ação ou conjunto de ações que devem ocorrer no momento em que passamos o mouse em cima de alguma área específica do site. Essa área é explicitada logo em seguida do hover, que nesse exemplo seria o figcaption (campo de legenda e legenda). Dessa forma, quando passamos o mouse no campo de legenda, ou seja, no figcaption, as ações escritas abaixo ocorrerão */
+figure.foto-legenda figcaption:hover{  /* O 'hover' determina uma ação ou conjunto de ações que devem ocorrer no momento em que passamos o mouse em cima de alguma área específica do site. Essa área é explicitada logo em seguida do hover, que nesse exemplo seria o figcaption (campo de legenda e legenda). Dessa forma, quando passamos o mouse no campo de legenda, ou seja, no figcaption, as ações escritas abaixo ocorrerão */
 	opacity: 1;
-	transition: opacity 1s; /* Transition define o tempo necessário (em segundos) para realizar uma mudança de um parâmetro. Geralmente àquele que sofrerá modificações ao passarmos o mouse em cima. A ordem dos parâmetros do transition é: o parâmetro a ser modificado, tempo de transição */
 }
 
 /* Formatação do Menu */
@@ -57,12 +69,39 @@ nav#menu ol{  /* O '#menu' é pra especificar que eu estou trabalhando com o nav
 	/*position: relative;  ->  A POSIÇÃO RELATIVA SÓ IRÁ CONSIDERAR O ESPAÇO DENTRO DO BLOCO NO NAV */
 	position: absolute; /* A POSIÇÃO ABSOLUTA CONSIDERA O ESPAÇO DE TODA A PÁGINA DO SITE, NÃO ESTANDO ASSIM LIMITADO A APENAS O ESPAÇO DO BLOCO */
 	top: -20px; /* Posição do 'objeto' referenciado, no caso a lista ol, para cima */
-	left: 900px; /* Posição do 'objeto' referenciado, no caso a lista ol, para a esquerda */
+	left: 850px; /* Posição do 'objeto' referenciado, no caso a lista ol, para a esquerda */
 }
 
 nav#menu li{
 	display: inline-block; /* Coloca os itens de menu um ao lado do outro */
 	background-color: #dddddd; /* Código rgb para um cinza claro */
-	padding: 10px; /* Espalhamento de dentro pra fora do bloco cinza interno ao item */
+	padding: 10px; /* Espalhamento de dentro pra fora do bloco cinza interno ao item. Como eu queria 10px para cima, direita, baixo e esquerda, não precisei colocar os quatro, e sim apenas 1 considerando pra todos. */
 	margin: 2px; /* Distância entre um bloco de item a outro */
+	transition: background-color 1s;
+	/* Essas variações do 'transition' foram geradas ao copiar o código 'transition: background-color 1s;' no site 'Prefixr'. Ele gera códigos equivalentes que suportam em navegadores de versão mais antigas. Nesse caso, a função transition irá funcionar nos mais antigos */
+	-moz-transition: background-color 1s; /* Mozila FireFox */
+	-webkit-transition: background-color 1s; /* Safari */
+	-ms-transition: background-color 1s; /* Navegadores Microsoft */
+	-o-transition: background-color 1s; /* Opera */
+}
+
+nav#menu li:hover { /* É IMPORTANTE NÃO DEIXAR NENHUM ESPAÇO ENTRE O DOIS PONTOS E O HOVER, POIS ASSIM ELE NÃO FUNCIONA */
+	background-color: #606060;
+}
+
+nav#menu a{ /* Acessando os links <a> (âncoras) */
+	color: #000000; /* código rgb da cor preto */
+	text-decoration: none; /* Tira o sublinhado dos links */
+}
+
+nav#menu a:hover{
+	color: #ffffff; /* código rgb da cor branco */
+	text-decoration: underline; /* Ativa o sublinhado nos links */
+}
+
+/* Formatação do Cabeçalho */
+header#cabecalho img#icone {
+	position: absolute;
+	top: 80px;
+	left: 1350px;
 }
