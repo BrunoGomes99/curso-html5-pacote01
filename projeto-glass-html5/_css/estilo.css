@@ -1,5 +1,10 @@
-@charset "utf-8"; 
+@charset "utf-8";
 /* Em css o charset fica dessa forma */
+
+@font-face{ /* USADO PARA IMPORTARMOS FONTES EXTERNAS BAIXADAS NA INTERNET */
+	font-family: 'FonteLogo'; /* Em áspas simples, coloca o nome da fonte que estou importando */
+	src: url("../_fonts/bubblegum-sans-regular.otf"); /* 'src' vem de source, ou seja, é a fonte(local) de onde se encontra a fonte(letra) no projeto */
+}
 
 /*Aqui embaixo estão os estilos de css (style) body e p, substituindo o que existia no código html. */
 body{
@@ -22,7 +27,7 @@ div#interface{
 /* Formatação de Imagens com Legendas */
 
 figure.foto-legenda{ /* Dessa forma acesso o figure da classe foto-legenda*/
-	border: 8px solid white; /* Os parâmetros são respectivamente: Largura da borda, tipo de borda e cor da borda */
+	border: 8px solid white; /* Os parâmetros são respectivamente: Largura da borda, tipo de borda(solid=linha continua; dashed=linha tracejada; dotted=linha pontilhada; double=linha contínua mais forte) e cor da borda */
 	box-shadow: 1px 1px 4px black;   /* box-shadow é responsável por sobreamentos e seus parâmetros são respectivamente: deslocamento horizontal (em px), deslocamento vertical (em px), espalhamento e cor */
 	position: relative; /* A posição relativa para a borda é essencial para mantermos as legenedas dentro desta. A posição relativa indica que a borda ficará na posição do figure relativo ao código em html, ou seja, a borda ficará na posição onde o figure se encontra nocódigo html */
 } 
@@ -104,4 +109,52 @@ header#cabecalho img#icone {
 	position: absolute;
 	top: 80px;
 	left: 1350px;
+}
+
+header#cabecalho{
+	/*border: 1px #606060 solid; /* Border: 'largura da borda' 'cor da borda' 'estilo da borda';
+	/* Existem vários tipos de border: 'border-top', que é a borda de cima; 'border-right', que é a borda da direita; 'border-bottom', que é a borda de baixo; 'borde-left', que é a borda da esquerda. */ 
+	border-bottom: 1px #606060 solid; /* Lembrando que estamos falando da borda do CABEÇALHO, por isso que mesmo colocando a borda de baixo, ainda aparece em cima do site */
+	height: 150px;
+	background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 95px; /* Primeiramente, o '..' no url foi para voltar uma pasta, visto que eu estava na pasta '_css' e queria acessar uma outra pasta, a '_imagens'. Quanto ao outro parâmetro, serve para que eu utilize apenas uma cópia da imagem no fundo e não várias repetidas. Os outros dois parâmetros são respectivamente o 'deslocamento horizontal' e o 'deslocamento vertical' da imagem. EU NÃO COLOQUEI 'background-image' PQ NÃO DÁ PRA EVITAR AS REPETIÇÕES ASSIM. */
+}
+
+header#cabecalho h1{
+	font-family: 'FonteLogo', sans-serif; /* Font family: 'Tipo da fonte', 'sem serifa'; (Serifa são os pequenos traços e prolongamentos que ocorrem no fim das hastes das letras). Nesse caso, como estou utilizando uma fonte externa ou baixada, que foi inicializada lá em cima no '@font-face', usa-se áspas simples no seu nome */
+	font-size: 30pt; /* Tamanho da fonte é em 'pt' e não em px */
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5); /* Para colocar sombras em LETRAS, usa-se 'text-shadow'. O 'box-shadow' é apenas para sombras do contorno/borda/contêiner */
+	padding: 0px;
+	margin-bottom: 10px; /* Margem apenas de baixo */
+}
+
+header#cabecalho h2{
+	font-family: 'Titillium Web', sans-serif; /* Trecho de código obtido no site 'google.com/fonts' para a fonte Titillium Web */
+	font-size: 15pt;
+	color: #888888; /* Um cinza claro */
+	padding: 0px;
+	margin-top: 10px; /* Margem apenas do topo */
+}
+
+section#corpo{
+	display: block; /* Deve estar na forma de bloco para que se possa separar na esquerda da página */
+	width: 750px;
+	float: left; /* 'float' significa flutuar. Uma vez que o parâmetro é 'left', significa que o objeto tratado irá deslocar/flutuar para a esquerda. Só funciona se este se encontrar na forma de bloco */
+	border-right: 1px #606060 solid;
+	padding-right:20px; 
+}
+
+aside#lateral{
+	display: block;
+	width: 650px;
+	float: right; /* Desloca o bloco para a direita */
+}
+
+footer#rodape{
+	clear: both; /* Uma vez que o rodapé se encontrará na parte debaixo do site. É importante evitar que o mesmo se encontre no meio das duas divisões da esquerda e direita, respectivamente: 'section' e 'aside'. Por isso, o comando 'clear', serve para 'limpar a bagunça' existente entre essas duas divisões. O parâmetro 'both', que significa 'ambos', serve para informar que estamos tirando o rodapé do meio dos DOIS lados. */
+	border-top: 1px #606060 solid;
+}
+
+footer#rodape p{
+	text-align: center;
 }
