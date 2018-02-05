@@ -108,12 +108,23 @@
 	<p>Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014.</p>
 
 	<h1>Especificações Técnicas</h1>
-	Tabela Técnica do Google Glass Mar/2013
 
-	Tela:Resolução equivalente a tela de 25"
-	Camera: 5MP para fotos / 720p para vídeos
-	Conectividade: Wi-Fi/ Bluetooth
-	Memória Interna: 12GB
+<!-- ID E CLASSES: No html e css, um 'id' só pode ser utilizado para um único objeto, e não vários. Dessa forma, quando for exigido que vários objetos tenham as mesmas características, é necessário utilizar classes, através do parâmetro 'class="nome_da_classe"' -->
+
+	<table id="tabelaspec"> <!-- A tag <table> é responsável por criar uma tabela-->
+		<caption>Tabela Técnica do Google Glass <span>Mar/2013</span></caption>  <!-- A tag <caption> é utilizado para pôr título legendas em TABELAS. Pode ser usada apenas uma caption por tabela-->
+		<!-- A tag <span> utilizada no caption serve para delimitar/demarcar algum trecho do código para que possamos trabalhar em cima dele, na formatação por exemplo -->
+		<!-- Em html, tabelas são compostas por linhas e por células. A tag utilizada para determinar as linhas é <tr>, que vem de'table-row'. Já as céluas são representadas pela tag <td>, que vem de 'table-data', por isso as células serão os dados correspondentes à linha a qual estou trabalhando. É importante utilizar as tags <td> dentro da tag <tr>, para que se possa especificar quais dados existem em cada linha da tabela. -->
+
+		<!-- Aqui como trabalharemos com formatação diferente para os <td> da esquerda e os da direita, não poderemos fazer a formatação generalizada da tag <td>. E como existe mais um <td> na esquerda e mais de um <td> na direita a serem configurados, será necessário criar uma classe, ao invés de repetir um mesmo id para todos os <td> da esquerda e outro id para todos os <td> da direita. Portanto, deverá ser criado uma classe -->
+		<tr><td class="ce">Tela</td> <td class="cd">Resolução equivalente a tela de 25"</td></tr> <!-- Vou utilizar os nomes das classes de coluna da esquerda (ce) e da direita (cd) -->
+		<tr><td rowspan="2" class="ce">Camera</td> <td class="cd">5MP para fotos</td></tr> <!-- o parâmetro 'rowspan="qtd_de_linhas_desejadas"', da tag <td> (APENAS A TAG TD), serve para informar a quantidade de linhas que uma célula irá utilizar. Dessa forma a célula utilizará sua linha atual, mais as próximas linhas abaixo conforme a quantidade informada-->
+		<!-- Da mesma forma, existe o parâmetro 'colspan="qtd_colunas_desejadas"', responsável por informar a quantidade de colunas que uma célula irá utilizar. Também só funciona na tag <td> -->
+		<tr><td class="cd">720p para vídeos</td></tr>
+		<tr><td rowspan="2" class="ce">Conectividade</td> <td class="cd">Wi-Fi</td></tr>
+		<tr><td class="cd">Bluetooth</td></tr>
+		<tr><td class="ce">Memória Interna</td> <td class="cd">12GB</td></tr>
+	</table>
 
 	<h1>Como funciona</h1>
 	<p>De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça</p>

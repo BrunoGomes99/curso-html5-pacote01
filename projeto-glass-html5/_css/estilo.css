@@ -156,5 +156,44 @@ footer#rodape{
 }
 
 footer#rodape p{
-	text-align: center;
+	text-align: center; /* Centraliza o texto */
+}
+
+/* Formatação da Tabela */
+table#tabelaspec{
+	border: 1px #606060 solid;
+	margin-right: auto;
+	margin-left: auto; /* Margens da esquerda e direita como 'auto' são feitas para que o objeto fique centralizado, no caso, o objeto é a tabela */
+	border-spacing: 0px; /* 'border-spacing' é capaz de unificar as bordas de cada célula (dados da tabelas), por isso é usado 0px, para que não tenha distância entre as bordas e elas fiquem como uma só. Como o nome diz, ele controla o espaço entre as bordas */
+}
+
+table#tabelaspec td{
+	border: 1px #606060 solid;
+	padding: 10px;
+	/* Além do comando 'text-align', utilizado para o posicionamento/alinhamento de textos, podendo ser justify, center, left, right, entre outros, existe também uma forma de posicionar textos verticalmente, com o comando 'vertical-align', que assume como parâmetro, valores como 'top'(cima), 'bottom'(baixo) e 'middle'(meio) */
+}
+
+table#tabelaspec td.ce{
+	text-align: right;
+	vertical-align: top;
+	background-color: #606060;
+	color: #ffffff;
+	font-weight: bold; /* Comando utilizado para colocar a letra em negrito no CSS */
+}
+
+table#tabelaspec td.cd{
+	background-color: #cecece;
+}
+
+table#tabelaspec caption{
+	color: #888888;
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+table#tabelaspec span{
+	display: block;
+	float: right;
+	font-size: 8pt;
+	margin-top: 10px;
 }
