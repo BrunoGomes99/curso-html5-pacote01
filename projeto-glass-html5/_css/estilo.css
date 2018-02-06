@@ -10,10 +10,22 @@
 body{
 	background-color: #dddddd;
 	color: rgba(0, 0, 0, 1);
+	font-family: Arial, sans-serif;
 }
+
 p{
 	text-align: justify;
 	text-indent: 50px;
+}
+
+a{
+	text-decoration: none;
+	color: #606060;
+	font-weight: bold;
+}
+
+a:hover{
+	text-decoration: underline;
 }
 
 div#interface{
@@ -136,18 +148,25 @@ header#cabecalho h2{
 	margin-top: 10px; /* Margem apenas do topo */
 }
 
+
+/* Formatação do section, aside e footer */
 section#corpo{
 	display: block; /* Deve estar na forma de bloco para que se possa separar na esquerda da página */
 	width: 750px;
 	float: left; /* 'float' significa flutuar. Uma vez que o parâmetro é 'left', significa que o objeto tratado irá deslocar/flutuar para a esquerda. Só funciona se este se encontrar na forma de bloco */
 	border-right: 1px #606060 solid;
-	padding-right:20px; 
+	padding-right:20px;
+
 }
 
 aside#lateral{
 	display: block;
 	width: 650px;
 	float: right; /* Desloca o bloco para a direita */
+	background-color: #dddddd;
+	padding: 10px;
+	margin-top: 15px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.5)
 }
 
 footer#rodape{
@@ -157,6 +176,53 @@ footer#rodape{
 
 footer#rodape p{
 	text-align: center; /* Centraliza o texto */
+}
+
+article#noticia-principal h2{
+	color: #606060;
+	background-color: #dddddd;
+	font-size: 13pt;
+	font-weight: bold;
+	vertical-align: middle;
+	padding: 5px;
+}
+
+header#cabecalho-artigo h1{
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 20pt;
+	color: #606060;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+header#cabecalho-artigo h2{
+	background-color: #ffffff;
+	color: #cecece;
+	font-size: 13pt;
+	margin: 0px;
+}
+
+header#cabecalho-artigo h3{
+	font-size: 12pt;
+	color: #606060;
+}
+
+.direita{
+	text-align:right;
+}
+
+aside#lateral h1{
+	font-family: 'FonteLogo', sans-serif;
+	color: #606060;
+	font-size: 20pt;
+	margin-top: 15px;
+}
+
+aside#lateral h2{
+	font-size: 13pt;
+	background-color: #606060;
+	color: #ffffff;
+	padding: 5px;
 }
 
 /* Formatação da Tabela */
