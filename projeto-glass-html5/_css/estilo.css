@@ -109,6 +109,7 @@ nav#menu li:hover { /* É IMPORTANTE NÃO DEIXAR NENHUM ESPAÇO ENTRE O DOIS PON
 nav#menu a{ /* Acessando os links <a> (âncoras) */
 	color: #000000; /* código rgb da cor preto */
 	text-decoration: none; /* Tira o sublinhado dos links */
+	font-weight: normal;
 }
 
 nav#menu a:hover{
