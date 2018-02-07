@@ -84,9 +84,14 @@ nav#menu ol{  /* O '#menu' é pra especificar que eu estou trabalhando com o nav
 	list-style: none; /* O 'none' retira os demarcadores do menu */
 	text-transform: uppercase; /* Deixa todos os itens da lista em caixa alta */
 	/*position: relative;  ->  A POSIÇÃO RELATIVA SÓ IRÁ CONSIDERAR O ESPAÇO DENTRO DO BLOCO NO NAV */
+	
+/*	position: absolute; /* A POSIÇÃO ABSOLUTA CONSIDERA O ESPAÇO DE TODA A PÁGINA DO SITE, NÃO ESTANDO ASSIM LIMITADO A APENAS O ESPAÇO DO BLOCO */
+/*	top: -20px; /* Posição do 'objeto' referenciado, no caso a lista ol, para cima */
+/*	left: 850px; /* Posição do 'objeto' referenciado, no caso a lista ol, para a esquerda */
+
 	position: absolute; /* A POSIÇÃO ABSOLUTA CONSIDERA O ESPAÇO DE TODA A PÁGINA DO SITE, NÃO ESTANDO ASSIM LIMITADO A APENAS O ESPAÇO DO BLOCO */
-	top: -20px; /* Posição do 'objeto' referenciado, no caso a lista ol, para cima */
-	left: 850px; /* Posição do 'objeto' referenciado, no caso a lista ol, para a esquerda */
+	top: -2.5%; /* Posição do 'objeto' referenciado, no caso a lista ol, para cima */
+	left: 53.7%; /* Posição do 'objeto' referenciado, no caso a lista ol, para a esquerda */
 }
 
 nav#menu li{
@@ -119,9 +124,15 @@ nav#menu a:hover{
 
 /* Formatação do Cabeçalho */
 header#cabecalho img#icone {
-	position: absolute;
+	/*position: absolute;
 	top: 80px;
-	left: 1350px;
+	left: 1350px;*/
+	position: absolute;
+	top: 10.1%;
+	left: 85.3%;
+/*	position: relative;
+	left: 88.8%;
+	top: 30%;*/
 }
 
 header#cabecalho{

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Teste Lâmpada</title>
+	<script type="text/javascript"> /* VER O CÓDIGO ANTIGO PARA MELHOR ENTENDIMENTO */
+		
+		var quebrada = false; /* Para declaração de variáveis em javaScript, é necessário utilizar a palavra var antes do nome desta. Não precisa colocar o tipo */
+		function mudaLampada(arquivo){
+			if(!quebrada){ /* Quebrada é falso? Isso pq para o if acontecer a condição deve ser verdadeira. Logo, se eu colocasse só "if(quebrada)", iria entrar no if se quebrada fosse verdadeiro, mas no momento que eu uso a negação '!' em 'if(!quebrada)', só entrará no if se quebrada for falso */
+				document.getElementById("luz").src = "_imagens/"+arquivo+".jpg";
+				if(arquivo == 'lampada-quebrada'){
+					quebrada = true;
+				}
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<h1>Acenda a Lâmpada!</h1>
+	<!-- Como irei referenciar esta imagem em um código em javaScript é de extrema importância que eu crie um id para o mesmo -->
+
+	<img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')" /> 
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Teste Lâmpada</title>
+	<script type="text/javascript">
+		function acendaLampada(){  //Para declararmos funções em javaScript, é necessário colocarmos a palavra 'function' antes do nome da função declarada
+			document.getElementById("luz").src = "_imagens/lampada-acesa.jpg";
+			/* Aqui, primeiramente estamos acessando o documento em html através de 'document', em seguida após o ponto, é utilizada a função 'getElementById("nome_id")', que obtém um objeto através do seu 'id', por isso é importante que tenha um id declarado. E em seguida o 'src', que vem de source, obtém a fonte do novo arquivo que queremos substituir nesse elemento de id obtido */
+		}
+
+		function apagaLampada(){
+			document.getElementById("luz").src = "_imagens/lampada-apagada.jpg";
+		}
+
+		function quebraLampada(){
+			document.getElementById("luz").src = "_imagens/lampada-quebrada.jpg";
+		}
+	</script>
+</head>
+<body>
+	<h1>Acenda a Lâmpada!</h1>
+	<!-- Como irei referenciar esta imagem em um código em javaScript é de extrema importância que eu crie um id para o mesmo -->
+
+	<img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="acendaLampada()" onmouseout="apagaLampada()" onclick="quebraLampada()" /> <!-- A função 'onmousemove' ao lado, é do javaScript, e é sim colocada como um parâmetro dentro da tag <img>. Seu objetivo é realizar algo assim que PASSARMOS o mouse sobre alguma coisa. Aqui, como ela está sendo usada como parâmetro desta imagem, significa que a ação ocorrerá no momento em que passamos o mouse por cima desta imagem. Observamos que como parâmetro de 'onmousemove' se encontra a função 'acendaLampada', que foi declarada logo acima, na tag <script>, sendo portanto, uma função javaScript. Logo, assim que passamos o mouse sobre a imagem, a função 'acendaLampada' será chamada --> 
+	<!-- A função 'onmouseout' realizará a ação determinada no seu parâmetro (no caso, a chamada da função 'apagaLampada' declarada em javaScript logo acima) sempre que TIRARMOS o mouse de cima do objeto a qual a função está referenciada, no caso este <img> -->
+	<!-- A função 'onclick' realizará a ação determinada no seu parâmetro (no caso, a chamada da função 'quebraLampada' declarada em javaScript logo acima) assim que dermos um CLIQUE com o mouse sobre o objeto a qual a função está referenciada, no caso este <img> -->
+</body>
+</html>
