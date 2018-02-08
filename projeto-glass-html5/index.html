@@ -17,7 +17,9 @@
 
 <body>
 
-<script type="text/javascript">  /* Tudo que estiver entre as tags <scipt> será reconhecido como javaScript, por isso já devemos utilizar códigos nessa linguagem. A prova disso é que no momento que eu coloco uma comentário dentro desta, já não é mais visto reconhecido como <!-- -->, comentário característico do html, e sim como /* */ //, que é utilizado no javaScript. Lembrando que pode ficar dentro do <body> ou do <head>, embora o <head> seja mais indicado. Agora já estou utilizando o comentário '//'
+<script language="javascript" src="_javascript/funcoes.js" type="text/javascript" >  /* Utiliza-se o parâmetro 'language' para definir a linguagem utilizada, no caso, o javascript; o parâmetro 'src' indica a fonte do código em javascript, ou seja, onde ele está localizado. Diferentemente do css, não usa o 'href', que é apenas para links, e sim o 'src' 
+
+/* Tudo que estiver entre as tags <scipt> será reconhecido como javaScript, por isso já devemos utilizar códigos nessa linguagem. A prova disso é que no momento que eu coloco uma comentário dentro desta, já não é mais visto reconhecido como <!-- -->, comentário característico do html, e sim como /* */ //, que é utilizado no javaScript. Lembrando que pode ficar dentro do <body> ou do <head>, embora o <head> seja mais indicado. Agora já estou utilizando o comentário '//'
 	
 </script>
 
@@ -31,7 +33,7 @@
 
 	<img id="icone" src="_imagens/glass-oculos-preto-peq.png">
 
-	<nav id="menu"> <!-- a tag <nav> é usada para delimitarmos um menu de navegação -->
+	<nav id="menu" onmouseout="mudaFoto('glass-oculos-preto-peq')"> <!-- a tag <nav> é usada para delimitarmos um menu de navegação -->
 		<!-- Para listas, temos duas tags: <ol>, que vem de ordered list (lista ordenada) e <ul>, que vem de unordered list (lista não ordenada). Para os itens de cada lista, utiliza-se a tag <li>, que vem de list items -->
 		<h1>Menu Principal</h1>
 		<ol type="1" start="1"> <!-- Podemos especificar o tipo de ordenação de uma lista 'ol', colocando dentro da tag, o comando 'type = "1, a, A, i ,I", em que '1' é a ordenação com números; 'a' é a ordenação alfabética minúscula; 'A' ordenação alfabética minúscula; 'i' ordenação romana minúscula; 'I' ordenação romana maiúscula. Podemos, com o parâmetro 'start', que vem logo ao lado do type, definir onde a ordenação começa, definindo sempre com números '1, 2, 3, 4, ... ', onde cada numeração corresponde a ordem do elemento desejado. Por exemplo '<ol type="A" start="3">', será uma ordenação alfabética maiúscula que inicia da letra C, pois é a 3 letra do alfabeto. Se eu não colocar, o código adotará o padrão de ordenação em números iniciando do 1--> 
@@ -47,11 +49,11 @@
 				</ul>
 			</ul>
 		--> 
-			<li><a href="index.html" target="_self">Home</a></li>
-			<li><a href="specs.html" target="_self">Especificações</a></li>
-			<li><a href="fotos.html" target="_self">Fotos</a></li>
-			<li><a href="multimidia.html" target="_self">Multimídia</a></li>
-			<li><a href="fale-conosco.html" target="_self">Fale conosco</a></li>
+			<li onmouseover="mudaFoto('home')"> <a href="index.html" target="_self">Home</a></li>
+			<li onmouseover="mudaFoto('especificacoes')"> <a href="specs.html" target="_self">Especificações</a></li>
+			<li onmouseover="mudaFoto('fotos')"> <a href="fotos.html" target="_self">Fotos</a></li>
+			<li onmouseover="mudaFoto('multimidia')"> <a href="multimidia.html" target="_self">Multimídia</a></li>
+			<li onmouseover="mudaFoto('contato')"> <a href="fale-conosco.html" target="_self">Fale conosco</a></li>
 			<!-- Uma DICA é usar o target _self para navegar em links dentro do meu site. Entretanto, para links externos, o _blank é mais adequado-->
 		</ol>
 	</nav>
