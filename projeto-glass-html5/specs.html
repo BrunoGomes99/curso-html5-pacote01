@@ -5,6 +5,7 @@
 	<title>Tudo sobre Google Glass</title>
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"> <!-- trecho de código obtido no site do 'google.com/fonts' para a fonte Titillium Web-->
 	<link rel="stylesheet" type="text/css" href="_css/estilo.css"/> <!-- Chamada do arquivo estilo.css localizado em '_css/estilo.css'-->
+	<link rel="stylesheet" type="text/css" href="_css/specs.css"> <!-- Chamada do arquivo specs.css localizado em '_css/specs.css' -->
 </head>
 
 <body>
@@ -33,15 +34,25 @@
 	</nav>
 	</header>
 
-Glass > Especificações
-Raio-X no Google Glass
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+<section id="corpo-full">
+	<article id="noticia-principal">
+		<header id="cabecalho-artigo">
+			<hgroup>
+				<h3>Glass > Especificações</h3>
+				<h1>Raio-X no Google Glass</h1>
+				<h2>por Gustavo Guanabara</h2>
+				<h3>Atualizado em 01/Maio/2013</h3>
+			</hgroup>
+		</header>
+		<p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
 
-Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.
-
-[AQUI ENTRA UMA IMAGEM]
-
+		<section id="conteudo"> <!-- Como iremos trabalhar com uma imagem interativa e com um iframe, criamos uma outra section, interna à section "corpo-full", onde colocaremos a imagem e o iframe -->
+			<img src="_imagens/glass-esquema-marcado.jpg">
+			<iframe src="google-glass.html" name="janela" id="frame-spec"></iframe> <!-- A tag <iframe> é responsável por carregar conteúdos de outros documentos, como outros arquivos html, por exemplo, para dentro do arquivo html atual. É altamente recomendado que sempre definimos um nome para o iframe através do parâmetro 'name'. Além disso, criamos um id para sua configuração css  -->
+		</section>
+		
+	</article>
+</section>
 <footer id="rodape">
 	<p>Copyright &copy; 2013 - by Gustavo Guanabara<br/>
 	<a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a> | <a href="http://twitter.com/cursosemvideo" target="_blank">Twitter</a></p>

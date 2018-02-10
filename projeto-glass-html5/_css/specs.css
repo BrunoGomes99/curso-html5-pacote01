@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/* ESSE ARQUIVO CSS SERVIRÁ PARA AS CONFIGURAÇÕES APENAS DOS OBJETOS QUE ESTÃO EM 'specs.html', POIS HAVERÃO ARQUIVOS ÚNICOS DESTE QUE NÃO TÊM NECESSIDADE DE SEREM CARREGADOS NOS OUTROS ARQUIVOS HTML */
+
+/* Formatação do Iframe */
+section#conteudo {
+	width: 60%;
+	margin: auto; /* O parâmetro auto, irá centralizar o objeto */
+}
+
+iframe#frame-spec {
+	width: 41%;
+	height: 280px;
+	border: none; /* Desativa a borda */
+	/*overflow: hidden; /* Desativa o rolamento do iframe. COLOQUEI ESSE TRECHO NO 'google-glass.html', NAS CONFIGURAÇÕES CSS 'style' DO 'body' */
+}
+
+/*iframe#frame-spec::-webkit-scrollbar {
+    display: none;
+}*/
